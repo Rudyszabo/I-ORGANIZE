@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+  <head>
+								<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <title>My App</title>
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="app.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Spirax" rel="stylesheet">
+    <style>
+      ul.colour-picker li {
+				position: relative;
+				display: block;
+				float: left;
+				height: 54px;
+				width: 25%;
+				-webkit-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			ul.colour-picker li[data-colour="teal"] {
+				background: #2B9;
+			}
+			ul.colour-picker li[data-colour="green"] {
+				background: #3C7;
+			}
+			ul.colour-picker li[data-colour="yellow"] {
+				background: #EC1;
+			}
+			ul.colour-picker li[data-colour="orange"] {
+				background: #E82;
+			}
+			ul.colour-picker li[data-colour="red"] {
+				background: #E54;
+			}
+			ul.colour-picker li[data-colour="blue"] {
+				background: #39D;
+			}
+			ul.colour-picker li[data-colour="dark-blue"] {
+				background: #345;
+			}
+			ul.colour-picker li[data-colour="white"] {
+				background: #FFF;
+			}
+			ul.colour-picker li.active:before {
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				background: rgba(0,0,0,0.1);
+				content: "";
+			}
+
+			@-webkit-keyframes pulse {
+				0% {
+					background-color: #CCC;
+				}
+				25% {
+					background-color: #EEE;
+				}
+				50% {
+					background-color: #CCC;
+				}
+				75% {
+					background-color: #EEE;
+				}
+				100% {
+					background-color: #CCC;
+				}
+			}
+			.scroll-page .loading {
+				margin: 12px auto;
+				border: 8px solid #AAA;
+				height: 16px;
+				width: 16px;
+				background: #CCC;
+				border-radius: 16px;
+				-webkit-animation: pulse 2s ease-in-out 0s infinite;
+			}
+			
+			.app-section{
+				width:50%;
+				margin:auto;
+				background-color:lightblue;
+				font-family: 'Spirax', cursive;
+			
+			
+			}
+			
+			img{
+				width:280px;
+				height:200px;
+				margin:auto;
+			
+			}
+					
+			body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 18;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+			
+    </style>
+  </head>
+
+  <body>
+    <div class="app-page" data-page="home">
+      <div class="app-topbar">
+        <div class="app-title">I Organize</div>
+      </div>
+      <div class="app-content">
+		<h2 class="app-section">
+		
+	<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+		
+					Your motivational App to help you plan and get you thru your day.
+				<img src="logo1.png"></h2>
+				
+				<div class="app-section">
+					
+				
+				<div class="app-section">
+					<div class="app-button" data-target="lists">Organize List</div>
+					<div class="app-button" data-target="buttons">Start your day</div>
+					<div class="app-button" data-target="inputs">Customize your App</div>
+					<div class="app-button" data-target="scroll">Info</div>
+				</div>
+						
+        <div class="app-section">
+          <div class="app-button" data-target="page2">Go to Page 2</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-page" data-page="page2">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">Page 2</div>
+      </div>
+      <div class="app-content">
+	  
+	  
+        Page 2 is lonely
+		
+		<img src="logo1.png">
+		<div class="app-content"><div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+      </div>
+    </div>
+	
+	<div class="app-page" data-page="lists">
+			<div class="app-topbar">
+				<div class="left app-button" data-back data-autotitle></div>
+				<div class="app-title"><span class="app-icon"></span>Mondays Lists</div>
+			</div>
+
+				
+			<div class="app-content"><div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+				<ul class="app-list">
+					<label>Early Morning</label>
+						<li><input type="checkbox">Make your bed</li>
+						<li><input type="checkbox">Brush your teeth</li>
+						<li><input type="checkbox">Take a shower</li>
+						<li><input type="checkbox">15 minute workout</li>
+						<li><input type="checkbox">Eat breakfast</li>
+					
+					<label>Morning</label>
+						<li><input type="checkbox">Start laundry</li>
+						<li><input type="checkbox">Clean up kitchen</li>
+						<li><input type="checkbox">Dust</li>
+						<li><input type="checkbox">Windows</li>
+						<li><input type="checkbox">Sweep</li>
+					
+					<label>Afternoon</label>
+						<li><input type="checkbox">Vacuum</li>
+						<li><input type="checkbox">Mop</li>
+						<li><input type="checkbox">Put away laundry</li>
+						<li><input type="checkbox">Eat lunch</li>
+						<li><input type="checkbox">15 minute activity</li>
+					
+					<label>Evening</label>
+						<li><input type="checkbox">Make dinner</li>
+						<li><input type="checkbox">Clean kitchen</li>
+						<li><input type="checkbox">15-30 minute activity</li>
+						<li><input type="checkbox">Take a walk</li>
+						<li><input type="checkbox">Eat dinner</li>
+					
+					<label>Late Evening</label>
+						<li><input type="checkbox">Read a book</li>
+						<li><input type="checkbox">Watch a movie</li>
+						<li><input type="checkbox">Play a game</li>
+						<li><input type="checkbox">Practice a new skill</li>
+						<li><input type="checkbox">Lite snack</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="app-page" data-page="buttons">
+			<div class="app-topbar">
+				<div class="left app-button" data-back data-autotitle></div>
+				<div class="app-title"><span class="app-icon"></span>Buttons</div>
+				<div class="right app-button app-menu">Dialog</div>
+			</div>	
+			
+			
+
+			<div class="app-content"><div class="app-content"><div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+				<div class="app-section">
+					<ul class="app-list">
+						<li class="app-button">Item 1</li>
+						<li class="app-button">Item 2</li>
+						<li class="app-button">Item 3</li>
+					</ul>
+				</div>
+
+				<div class="app-section">
+					<div class="app-button red" data-target="lists">Monday Button 1</div>
+					<div class="app-button green">Tuesday Button 2</div>
+					<div class="app-button blue">Wednesday Button 3</div>
+					<div class="app-button red">Thursday Button 4</div>
+					<div class="app-button green">Friday Button 5</div>
+					<div class="app-button blue">Saturday Button 6</div>
+					<div class="app-button red">Sunday Button 7</div>
+					
+			</div>
+		</div>
+	
+	
+
+    <script src="zepto.js"></script>
+    <script src="app.min.js"></script>
+    <script type="text/javascript">
+	
+	
+	function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+	
+		if (typeof(Storage) != "undefined") {
+		
+			//localStorage.setItem("name","mel");
+			
+			//alert(localStorage.getItem("name"));
+			
+			var names = [];
+			//names[0] = prompt("New member name?");
+			localStorage.setItem("names", JSON.stringify(names));
+			
+			var storedNames = JSON.parse(localStorage.getItem("names"));
+			
+			//alert(storedNames[0]);
+		
+		} else {
+		
+			//alert("Please upgrade your browser");
+			
+		}
+	
+		var oldColour = "";
+	
+	
+		function setupPageColour(page) {
+		
+			$(page).find('ul.colour-picker li')
+					.clickable()
+					.on('click', function () {
+						var colour = $(this).data('colour');
+						if (oldColour != ""){
+							$(".app-topbar").removeClass(oldColour);
+						}
+						$(".app-topbar").addClass(colour);
+						oldColour = colour;
+				});		
+		
+		}
+	
+	
+      App.controller('home', function (page) {
+        setupPageColour(page);
+		
+      });
+
+      App.controller('page2', function (page) {
+        setupPageColour(page);
+		
+      });
+	  
+	  App.controller('lists', function (page) {
+        setupPageColour(page);
+		
+      });
+	  
+	  App.controller('buttons', function (page) {
+        setupPageColour(page);
+		
+	  
+	  $(page).find('.app-menu')
+					.on('click', function () {
+						App.dialog({
+							doButton     : 'Do Something' ,
+							otherButton  : 'Or Another Thing'  ,
+							okButton     : 'Share on Kik' ,
+							cancelButton : 'Cancel'
+						}, function (choice) {
+							console.log(choice);
+						});
+					});
+					
+	  });
+
+      try {
+        App.restore();
+      } catch (err) {
+        App.load('home');
+      }
+	  
+    </script>
+  </body>
+</html>
