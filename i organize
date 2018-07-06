@@ -77,17 +77,17 @@
 			}
 			
 			.app-section{
-				width:50%;
+				width:100%;
 				margin:auto;
 				background-color:lightblue;
 				font-family: 'Spirax', cursive;
 			
-			
 			}
 			
+			
 			img{
-				width:280px;
-				height:200px;
+				width:200px;
+				height:150px;
 				margin:auto;
 			
 			}
@@ -156,7 +156,7 @@
 
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
 		
-					Your motivational App to help you plan and get you thru your day.
+					Your motivational App to help you plan and get you thru your day.</br>
 				<img src="logo1.png"></h2>
 				
 				<div class="app-section">
@@ -165,12 +165,13 @@
 				<div class="app-section">
 					<div class="app-button" data-target="lists">Organize List</div>
 					<div class="app-button" data-target="buttons">Start your day</div>
-					<div class="app-button" data-target="inputs">Customize your App</div>
-					<div class="app-button" data-target="scroll">Info</div>
+					<div class="app-button" data-target="inputs">Customize/Pick Theme</div>
+					<div class="app-button" data-target="scroll">About</div>
+					<div class="app-button" data-target="page2">Contact</div>
 				</div>
 						
         <div class="app-section">
-          <div class="app-button" data-target="page2">Go to Page 2</div>
+          
         </div>
       </div>
     </div>
@@ -178,21 +179,47 @@
     <div class="app-page" data-page="page2">
       <div class="app-topbar">
         <div class="app-button left" data-back data-autotitle></div>
-        <div class="app-title">Page 2</div>
+        <div class="app-title">Contact</div>
       </div>
       <div class="app-content">
 	  
 	  
-        Page 2 is lonely
+        Contact
 		
-		<img src="logo1.png">
-		<div class="app-content"><div id="mySidenav" class="sidenav">
+		<div class="app-section">
+					<b>Customize Topbar colours:</b><br>
+					
+					
+					
+					<ul class="colour-picker">
+						<li data-colour="teal"></li>
+						<li data-colour="green"></li>
+						<li data-colour="yellow"></li>
+						<li data-colour="orange"></li>
+						<li data-colour="red"></li>
+						<li data-colour="blue"></li>
+						<li data-colour="dark-blue"></li>
+						<li data-colour="white"></li>
+						<div class="clear"></div>
+					</ul>
+				</div>
+		<div class="app-content"><div id="mySidenav" class="sidenav"><img src="logo1.png">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
   <a href="#">About</a>
   <a href="#">Services</a>
   <a href="#">Clients</a>
   <a href="#">Contact</a>
 </div>
+
+	
+				
+				<div class="app-section">
+					<div class="app-button" data-target="lists">Organize List</div>
+					<div class="app-button" data-target="buttons">Start your day</div>
+					<div class="app-button" data-target="inputs">Customize your App</div>
+					<div class="app-button" data-target="scroll">Info</div>
+				</div>
+
 
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
       </div>
@@ -202,6 +229,7 @@
 			<div class="app-topbar">
 				<div class="left app-button" data-back data-autotitle></div>
 				<div class="app-title"><span class="app-icon"></span>Mondays Lists</div>
+				
 			</div>
 
 				
@@ -251,8 +279,44 @@
 						<li><input type="checkbox">Practice a new skill</li>
 						<li><input type="checkbox">Lite snack</li>
 				</ul>
+				
+				
+				
+				
+				
+				<ul class="app-inputs">
+					<label>Early Morning</label>
+						<li><input type="checkbox">Make </li>
+						<li><input type="checkbox">Brush</li>
+						<li><input type="checkbox">Take r</li>
+						<li><input type="checkbox">15 </li>
+						<li><input type="checkbox">Eat </li>
+					
+				</ul>
+				
+				
+				
+				
+				
 			</div>
 		</div>
+		
+		
+		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+				<ul class="app-list">
+					<label>tuesday</label>
+						<li><input type="checkbox">Make your bed</li>
+						<li><input type="checkbox">Brush your teeth</li>
+						<li><input type="checkbox">Take a shower</li>
+						<li><input type="checkbox">15 minute workout</li>
+						<li><input type="checkbox">Eat breakfast</li>
+					
+			
+				
+			</div>
+		</div>
+		
 
 		<div class="app-page" data-page="buttons">
 			<div class="app-topbar">
@@ -281,15 +345,34 @@
 				</div>
 
 				<div class="app-section">
-					<div class="app-button red" data-target="lists">Monday Button 1</div>
-					<div class="app-button green">Tuesday Button 2</div>
+					<div class="app-button blue" data-target="lists">Monday Button 1</div>
+					<div class="app-button blue" data-target="lists">Tuesday Button 2</div>
+					<div class="app-button blue" data-target="lists">Wednesday Button 3</div>
+					<div class="app-button blue" data-target="lists">Thursday Button 4</div>
+					<div class="app-button blue" data-target="lists">Friday Button 5</div>
+					<div class="app-button blue" data-target="lists">Saturday Button 6</div>
+					<div class="app-button blue" data-target="lists">Sunday Button 7</div>
+					
+			</div>
+			
+			<div class="app-section">
+					<div class="app-button red" data-target="inputs">Monday Button 1</div>
+					<div class="app-button green" data-target="inputs">Tuesday Button 2</div>
 					<div class="app-button blue">Wednesday Button 3</div>
 					<div class="app-button red">Thursday Button 4</div>
 					<div class="app-button green">Friday Button 5</div>
 					<div class="app-button blue">Saturday Button 6</div>
 					<div class="app-button red">Sunday Button 7</div>
+					<ul class="app-list">
+					<label>you did it</label>
+						<li><input type="checkbox">country theme</li>
+						<li><input type="checkbox">rock theme</li>
+						<li><input type="checkbox">classical theme</li>	
 					
+				</ul>
 			</div>
+			
+			
 		</div>
 	
 	
@@ -384,6 +467,41 @@ function closeNav() {
       } catch (err) {
         App.load('home');
       }
+	  
+	  
+	  // Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 	  
     </script>
   </body>
