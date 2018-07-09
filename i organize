@@ -6,7 +6,7 @@
 	
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
     <link rel="stylesheet" href="app.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Spirax" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <style>
       ul.colour-picker li {
 				position: relative;
@@ -77,17 +77,17 @@
 			}
 			
 			.app-section{
-				width:100%;
+				width:auto;
 				margin:auto;
 				background-color:lightblue;
-				font-family: 'Spirax', cursive;
+				font-family: "Lato", sans-serif;
 			
 			}
 			
 			
 			img{
-				width:200px;
-				height:150px;
+				width:345px;
+				height:240px;
 				margin:auto;
 			
 			}
@@ -125,14 +125,24 @@
 .sidenav .closebtn {
     position: absolute;
     top: 18;
-    right: 25px;
-    font-size: 36px;
+    right: 2px;
+    font-size: 30px;
     margin-left: 50px;
 }
 
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+.app-topbar{
+
+background-color:darkblue;
+color:white;
+width:auto%;
+
+
+
 }
 			
     </style>
@@ -146,26 +156,34 @@
       <div class="app-content">
 		<h2 class="app-section">
 		
+		
+														<!--SIDE NAV HOME PAGE-->
+		
+		
 	<div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Organize Lists</a>
+  <a href="#">Organize Day</a>
+  <a href="#">Organize Theme</a>
   <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
   <a href="#">Contact</a>
 </div>
 
+										<!--SIDE NAV ICON-->
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
-		
+
+
+	
 					Your motivational App to help you plan and get you thru your day.</br>
-				<img src="logo1.png"></h2>
+				<img src="logo1.png">
 				
 				<div class="app-section">
 					
 				
 				<div class="app-section">
 					<div class="app-button" data-target="lists">Organize List</div>
-					<div class="app-button" data-target="buttons">Start your day</div>
-					<div class="app-button" data-target="inputs">Customize/Pick Theme</div>
+					<div class="app-button" data-target="buttons">Organize your day</div>
+					<div class="app-button" data-target="inputs">Organize your Theme</div>
 					<div class="app-button" data-target="scroll">About</div>
 					<div class="app-button" data-target="page2">Contact</div>
 				</div>
@@ -182,6 +200,9 @@
         <div class="app-title">Contact</div>
       </div>
       <div class="app-content">
+	  
+	  
+														<!--Customize Topbar colours-->
 	  
 	  
         Contact
@@ -203,11 +224,16 @@
 						<div class="clear"></div>
 					</ul>
 				</div>
+				
+												<!--SIDE NAV-->
+
 		<div class="app-content"><div id="mySidenav" class="sidenav"><img src="logo1.png">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Home</a>
+  <a href="#">Organize Lists</a>
+  <a href="#">Organize Day</a>
+  <a href="#">Organize Theme</a>
   <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
   <a href="#">Contact</a>
 </div>
 
@@ -230,22 +256,46 @@
 				<div class="left app-button" data-back data-autotitle></div>
 				<div class="app-title"><span class="app-icon"></span>Mondays Lists</div>
 
+
 			</div>
 
+												<!--SIDE NAV-->
+				
 				
 			<div class="app-content"><div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Home</a>
+  <a href="#">Organize Lists</a>
+  <a href="#">Organize Day</a>
+  <a href="#">Organize Theme</a>
   <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
   <a href="#">Contact</a>
 </div>
 
+
+												<!--list-->
+
+
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+
+		<div class="wrap">
+  <p>click refresh to update your day.</p>
+  <form action="" method="POST">
+    <div id="checkbox-container">
+      <input type="checkbox" id="name" name="new_background" /></br>
+	  <input type="checkbox" id="name1" name="new_background" /></br>
+	  <input type="checkbox" id="name2" name="new_background" /></br>
+	  <input type="checkbox" id="name3" name="new_background" /></br>
+	  <input type="checkbox" id="name4" name="new_background" />
+    </div>
+
+    
+  </form>
+		
 
 				<ul class="app-list">
 					<label>Early Morning</label>
-						<li><input type="checkbox">Make your bed</li>
+						<li><input type="checkbox" name="new_background" />Make your bed</li>
 						<li><input type="checkbox">Brush your teeth</li>
 						<li><input type="checkbox">Take a shower</li>
 						<li><input type="checkbox">15 minute workout</li>
@@ -279,23 +329,7 @@
 						<li><input type="checkbox">Practice a new skill</li>
 						<li><input type="checkbox">Lite snack</li>
 				</ul>
-				
-				
-				
-				
-				
-				<ul class="app-inputs">
-					<label>Early Morning</label>
-						<li><input type="checkbox">Make </li>
-						<li><input type="checkbox">Brush</li>
-						<li><input type="checkbox">Take r</li>
-						<li><input type="checkbox">15 </li>
-						<li><input type="checkbox">Eat </li>
-					
-				</ul>
-				
-				
-				
+		
 				
 				
 			</div>
@@ -317,7 +351,9 @@
 			</div>
 		</div>
 		
-
+													<!--DIALOG-->
+		
+		
 		<div class="app-page" data-page="buttons">
 			<div class="app-topbar">
 				<div class="left app-button" data-back data-autotitle></div>
@@ -326,14 +362,21 @@
 			</div>	
 			
 			
-
+													<!--SIDE NAV-->
+			
+			
 			<div class="app-content"><div class="app-content"><div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">Home</a>
+  <a href="#">Organize Lists</a>
+  <a href="#">Organize Day</a>
+  <a href="#">Organize Theme</a>
   <a href="#">About</a>
-  <a href="#">Services</a>
-  <a href="#">Clients</a>
   <a href="#">Contact</a>
 </div>
+
+													<!--ITEM-->
+
 
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
 				<div class="app-section">
@@ -344,6 +387,11 @@
 					</ul>
 				</div>
 
+				
+												<!--Buttons-->
+				
+				
+				
 				<div class="app-section">
 					<div class="app-button blue" data-target="lists">Monday Button 1</div>
 					<div class="app-button blue" data-target="lists">Tuesday Button 2</div>
@@ -353,23 +401,6 @@
 					<div class="app-button blue" data-target="lists">Saturday Button 6</div>
 					<div class="app-button blue" data-target="lists">Sunday Button 7</div>
 					
-			</div>
-			
-			<div class="app-section">
-					<div class="app-button red" data-target="inputs">Monday Button 1</div>
-					<div class="app-button green" data-target="inputs">Tuesday Button 2</div>
-					<div class="app-button blue">Wednesday Button 3</div>
-					<div class="app-button red">Thursday Button 4</div>
-					<div class="app-button green">Friday Button 5</div>
-					<div class="app-button blue">Saturday Button 6</div>
-					<div class="app-button red">Sunday Button 7</div>
-					<ul class="app-list">
-					<label>you did it</label>
-						<li><input type="checkbox">country theme</li>
-						<li><input type="checkbox">rock theme</li>
-						<li><input type="checkbox">classical theme</li>	
-					
-				</ul>
 			</div>
 			
 			
@@ -382,13 +413,41 @@
     <script type="text/javascript">
 	
 	
-	function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
+	
+								<!--localStorage for checkbox keeps boxes checked-->
+	
+	var checkboxValue = JSON.parse(localStorage.getItem('checkboxValue')) || {}
+    var $checkbox = $("#checkbox-container :checkbox");
 
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
+    $checkbox.on("change", function() {
+      $checkbox.each(function() {
+        checkboxValue[this.id] = this.checked;
+      });
+      localStorage.setItem("checkboxValue", JSON.stringify(checkboxValue));
+    });
+
+    //on page load
+    $.each(checkboxValue, function(key, value) {
+      $("#" + key).prop('checked', value);
+    });
+	
+	
+	
+	
+								<!--open/close for side nav-->
+	
+	
+		function openNav() {
+		document.getElementById("mySidenav").style.width = "250px";
+	}
+
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+	}
+	
+	
+								<!--localStorage for-->
+	
 	
 		if (typeof(Storage) != "undefined") {
 		
@@ -409,6 +468,9 @@ function closeNav() {
 			//alert("Please upgrade your browser");
 			
 		}
+		
+		
+		
 	
 		var oldColour = "";
 	
