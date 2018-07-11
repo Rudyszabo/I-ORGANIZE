@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
     <link rel="stylesheet" href="app.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
       ul.colour-picker li {
 				position: relative;
@@ -94,6 +95,7 @@
 					
 			body {
     font-family: "Lato", sans-serif;
+	
 }
 
 .sidenav {
@@ -119,7 +121,7 @@
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: #333333;
 }
 
 .sidenav .closebtn {
@@ -141,6 +143,31 @@ background-color:darkblue;
 color:white;
 width:auto%;
 
+}
+
+label{
+
+color:darkblue;
+
+}
+
+h2{
+margin:auto;
+
+color:darkblue;
+
+}
+
+legend{
+
+color:darkblue;
+
+}
+
+.wrap{
+
+margin:auto;
+margin-left:120px;
 
 
 }
@@ -162,11 +189,12 @@ width:auto%;
 		
 	<div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Organize Lists</a>
-  <a href="#">Organize Day</a>
-  <a href="#">Organize Theme</a>
-  <a href="#">About</a>
-  <a href="#">Contact</a>
+  <a class="app-button" data-target="home">Home</a>
+  <a class="app-button" data-target="lists">Organize Lists</a>
+  <a class="app-button" data-target="buttons">Organize Day</a>
+  <a class="app-button" data-target="inputs">Organize Theme</a>
+  <a class="app-button" data-target="scroll">About</a>
+  <a class="app-button" data-target="page2">Contact</a>
 </div>
 
 										<!--SIDE NAV ICON-->
@@ -181,6 +209,7 @@ width:auto%;
 					
 				
 				<div class="app-section">
+			
 					<div class="app-button" data-target="lists">Organize List</div>
 					<div class="app-button" data-target="buttons">Organize your day</div>
 					<div class="app-button" data-target="inputs">Organize your Theme</div>
@@ -193,7 +222,69 @@ width:auto%;
         </div>
       </div>
     </div>
+	
+	
+									<!--Organize your Theme-->
+									
+										
+	
+    <div class="app-page" data-page="inputs">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">Organize your Theme</div>
+		
+		<h2>Pick your Theme</h2>
+    <form>
+      <fieldset>
+       <legend>Select Theme</legend>
+       <p>
+          <label>THEMES</label>  
+          
+          <input type = "radio"
+                 name = "radSize"
+                 id = "sizeSmall"
+                 value = "small"
+                 checked = "checked" />
+          <label for = "sizeSmall">Rock</label>
+		  
+          <input type = "radio"
+                 name = "radSize"
+                 id = "sizeMed"
+                 value = "medium" />
+          <label for = "sizeMed">Country</label>
+		  
+          <input type = "radio"
+                 name = "radSize"
+                 id = "sizeLarge"
+                 value = "large" />
+          <label for = "sizeLarge">R and B</label>
+		  
+		  <input type = "radio"
+                 name = "radSize"
+                 id = "sizeLarge"
+                 value = "large" />
+          <label for = "sizeLarge">Classical</label>
+		  
+        </p>       
+      </fieldset>     
+    </form>
+      </div>
+      <div class="app-content">
+	  
+	  
+	  									<!--About-->
+	
+    <div class="app-page" data-page="scroll">
+      <div class="app-topbar">
+        <div class="app-button left" data-back data-autotitle></div>
+        <div class="app-title">About</div>
+      </div>
+      <div class="app-content">
+	
+	
 
+									<!--Contact-->
+	
     <div class="app-page" data-page="page2">
       <div class="app-topbar">
         <div class="app-button left" data-back data-autotitle></div>
@@ -205,12 +296,16 @@ width:auto%;
 														<!--Customize Topbar colours-->
 	  
 	  
-        Contact
+        Contact				<div class="app-section">
+					<div class="app-button" data-target="home">Home</div>
+					<div class="app-button" data-target="lists">Organize List</div>
+					<div class="app-button" data-target="buttons">Start your day</div>
+					<div class="app-button" data-target="inputs">Customize your App</div>
+					<div class="app-button" data-target="scroll">About</div>
+				</div>
 		
 		<div class="app-section">
 					<b>Customize Topbar colours:</b><br>
-					
-					
 					
 					<ul class="colour-picker">
 						<li data-colour="teal"></li>
@@ -225,26 +320,22 @@ width:auto%;
 					</ul>
 				</div>
 				
+				
 												<!--SIDE NAV-->
 
-		<div class="app-content"><div id="mySidenav" class="sidenav"><img src="logo1.png">
+	<div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Home</a>
-  <a href="#">Organize Lists</a>
-  <a href="#">Organize Day</a>
-  <a href="#">Organize Theme</a>
-  <a href="#">About</a>
-  <a href="#">Contact</a>
+  <a class="app-button" data-target="home">Home</a>
+  <a class="app-button" data-target="lists">Organize Lists</a>
+  <a class="app-button" data-target="buttons">Organize Day</a>
+  <a class="app-button" data-target="inputs">Organize Theme</a>
+  <a class="app-button" data-target="scroll">About</a>
+  <a class="app-button" data-target="page2">Contact</a>
 </div>
 
 	
 				
-				<div class="app-section">
-					<div class="app-button" data-target="lists">Organize List</div>
-					<div class="app-button" data-target="buttons">Start your day</div>
-					<div class="app-button" data-target="inputs">Customize your App</div>
-					<div class="app-button" data-target="scroll">Info</div>
-				</div>
+
 
 
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
@@ -254,7 +345,7 @@ width:auto%;
 	<div class="app-page" data-page="lists">
 			<div class="app-topbar">
 				<div class="left app-button" data-back data-autotitle></div>
-				<div class="app-title"><span class="app-icon"></span>Mondays Lists</div>
+				<div class="app-title"><span class="app-icon"></span>Organize Lists</div>
 
 
 			</div>
@@ -262,14 +353,14 @@ width:auto%;
 												<!--SIDE NAV-->
 				
 				
-			<div class="app-content"><div id="mySidenav" class="sidenav">
+	<div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Home</a>
-  <a href="#">Organize Lists</a>
-  <a href="#">Organize Day</a>
-  <a href="#">Organize Theme</a>
-  <a href="#">About</a>
-  <a href="#">Contact</a>
+  <a class="app-button" data-target="home">Home</a>
+  <a class="app-button" data-target="lists">Organize Lists</a>
+  <a class="app-button" data-target="buttons">Organize Day</a>
+  <a class="app-button" data-target="inputs">Organize Theme</a>
+  <a class="app-button" data-target="scroll">About</a>
+  <a class="app-button" data-target="page2">Contact</a>
 </div>
 
 
@@ -278,73 +369,53 @@ width:auto%;
 
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
 
-		<div class="wrap">
-  <p>click refresh to update your day.</p>
-  <form action="" method="POST">
+		<div class="wrap"></br></br>
+		
+  <a href="checkboxcode-monday.html"style="font-size:24px">Monday</a></br></br></br>
+  <a href="checkboxcode-tuesday.html"style="font-size:24px">Tuesday</a></br></br></br>
+  <a href="checkboxcode-wednesday.html"style="font-size:24px">Wednesday</a></br></br></br>
+  <a href="checkboxcode-thursday.html"style="font-size:24px">Thursday</a></br></br></br>
+  <a href="checkboxcode-friday.html"style="font-size:24px">Friday</a></br></br></br>
+  <a href="checkboxcode-saturday.html"style="font-size:24px">Saturday</a></br></br></br>
+  <a href="checkboxcode-sunday.html"style="font-size:24px">Sunday</a></br></br></br>
+  
+  
+  
+  <form action="" method="POST"> 
     <div id="checkbox-container">
-      <input type="checkbox" id="name" name="new_background" /></br>
-	  <input type="checkbox" id="name1" name="new_background" /></br>
-	  <input type="checkbox" id="name2" name="new_background" /></br>
-	  <input type="checkbox" id="name3" name="new_background" /></br>
-	  <input type="checkbox" id="name4" name="new_background" />
+	<ul class="app-list">
+	
+	</ul>					
+					
+
     </div>
-
-    
+  
   </form>
-		
-
-				<ul class="app-list">
-					<label>Early Morning</label>
-						<li><input type="checkbox" name="new_background" />Make your bed</li>
-						<li><input type="checkbox">Brush your teeth</li>
-						<li><input type="checkbox">Take a shower</li>
-						<li><input type="checkbox">15 minute workout</li>
-						<li><input type="checkbox">Eat breakfast</li>
 					
-					<label>Morning</label>
-						<li><input type="checkbox">Start laundry</li>
-						<li><input type="checkbox">Clean up kitchen</li>
-						<li><input type="checkbox">Dust</li>
-						<li><input type="checkbox">Windows</li>
-						<li><input type="checkbox">Sweep</li>
-					
-					<label>Afternoon</label>
-						<li><input type="checkbox">Vacuum</li>
-						<li><input type="checkbox">Mop</li>
-						<li><input type="checkbox">Put away laundry</li>
-						<li><input type="checkbox">Eat lunch</li>
-						<li><input type="checkbox">15 minute activity</li>
-					
-					<label>Evening</label>
-						<li><input type="checkbox">Make dinner</li>
-						<li><input type="checkbox">Clean kitchen</li>
-						<li><input type="checkbox">15-30 minute activity</li>
-						<li><input type="checkbox">Take a walk</li>
-						<li><input type="checkbox">Eat dinner</li>
-					
-					<label>Late Evening</label>
-						<li><input type="checkbox">Read a book</li>
-						<li><input type="checkbox">Watch a movie</li>
-						<li><input type="checkbox">Play a game</li>
-						<li><input type="checkbox">Practice a new skill</li>
-						<li><input type="checkbox">Lite snack</li>
-				</ul>
-		
-				
-				
 			</div>
 		</div>
 		
 		
 		<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+	<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a class="app-button" data-target="home">Home</a>
+  <a class="app-button" data-target="lists">Organize Lists</a>
+  <a class="app-button" data-target="buttons">Organize Day</a>
+  <a class="app-button" data-target="inputs">Organize Theme</a>
+  <a class="app-button" data-target="scroll">About</a>
+  <a class="app-button" data-target="page2">Contact</a>
+</div>
+
+										<!--About Input-->
 
 				<ul class="app-list">
-					<label>tuesday</label>
-						<li><input type="checkbox">Make your bed</li>
-						<li><input type="checkbox">Brush your teeth</li>
-						<li><input type="checkbox">Take a shower</li>
-						<li><input type="checkbox">15 minute workout</li>
-						<li><input type="checkbox">Eat breakfast</li>
+					<label><label><h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TMS Developers</h1></label></label>
+					
+					<img src="toddzane.jpg"><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-cog fa-spin" style="font-size:24px"></i>&nbsp;Todd Szabo Web Development&nbsp;<i class="fa fa-cog fa-spin" style="font-size:24px"></i></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-facebook-square" style="font-size:30px"></i>&nbsp;&nbsp;<i class="fa fa-github-square" style="font-size:30px"></i>&nbsp;&nbsp;<i class="fa fa-linkedin-square" style="font-size:30px"></i>&nbsp;&nbsp;<i class="fa fa-twitter-square" style="font-size:30px"></i>&nbsp;&nbsp;<i class="fa fa-youtube-square" style="font-size:30px"></i></h3>&nbsp;
+					
+					<img src="mel.jpg"><h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-cog fa-spin" style="font-size:24px"></i>&nbsp;Melaine Szabo Web Design&nbsp;<i class="fa fa-cog fa-spin" style="font-size:24px"></i></br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-facebook-square" style="font-size:30px"></i>&nbsp;&nbsp;<i class="fa fa-github-square" style="font-size:30px"></i>&nbsp;&nbsp;<i class="fa fa-linkedin-square" style="font-size:30px"></i>&nbsp;&nbsp;<i class="fa fa-twitter-square" style="font-size:30px"></i>&nbsp;&nbsp;<i class="fa fa-youtube-square" style="font-size:30px"></i></h3>&nbsp;</h3>&nbsp;
+						<h1>In the beginning, there were two!!</h1>
 					
 			
 				
@@ -357,7 +428,7 @@ width:auto%;
 		<div class="app-page" data-page="buttons">
 			<div class="app-topbar">
 				<div class="left app-button" data-back data-autotitle></div>
-				<div class="app-title"><span class="app-icon"></span>Buttons</div>
+				<div class="app-title"><span class="app-icon"></span>Select day of the week</div>
 				<div class="right app-button app-menu">Dialog</div>
 			</div>	
 			
@@ -365,14 +436,14 @@ width:auto%;
 													<!--SIDE NAV-->
 			
 			
-			<div class="app-content"><div class="app-content"><div id="mySidenav" class="sidenav">
+	<div id="mySidenav" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Home</a>
-  <a href="#">Organize Lists</a>
-  <a href="#">Organize Day</a>
-  <a href="#">Organize Theme</a>
-  <a href="#">About</a>
-  <a href="#">Contact</a>
+  <a class="app-button" data-target="home">Home</a>
+  <a class="app-button" data-target="lists">Organize Lists</a>
+  <a class="app-button" data-target="buttons">Organize Day</a>
+  <a class="app-button" data-target="inputs">Organize Theme</a>
+  <a class="app-button" data-target="scroll">About</a>
+  <a class="app-button" data-target="page2">Contact</a>
 </div>
 
 													<!--ITEM-->
@@ -393,13 +464,13 @@ width:auto%;
 				
 				
 				<div class="app-section">
-					<div class="app-button blue" data-target="lists">Monday Button 1</div>
-					<div class="app-button blue" data-target="lists">Tuesday Button 2</div>
-					<div class="app-button blue" data-target="lists">Wednesday Button 3</div>
-					<div class="app-button blue" data-target="lists">Thursday Button 4</div>
-					<div class="app-button blue" data-target="lists">Friday Button 5</div>
-					<div class="app-button blue" data-target="lists">Saturday Button 6</div>
-					<div class="app-button blue" data-target="lists">Sunday Button 7</div>
+					<div class="app-button blue" data-target="lists"><a href="checkboxcode-monday.html">Monday</a></div>
+					<div class="app-button blue" data-target="lists"><a href="checkboxcode-tuesday.html">Tuesday</a></div>
+					<div class="app-button blue" data-target="lists"><a href="checkboxcode-wednesday.html">Wednesday</a></div>
+					<div class="app-button blue" data-target="lists"><a href="checkboxcode-thursday.html">Thursday</a></div>
+					<div class="app-button blue" data-target="lists"><a href="checkboxcode-friday.html">Friday</a></div>
+					<div class="app-button blue" data-target="lists"><a href="checkboxcode-saturday.html">Saturday</a></div>
+					<div class="app-button blue" data-target="lists"><a href="checkboxcode-sunday.html">Sunday</a></div>
 					
 			</div>
 			
@@ -412,6 +483,17 @@ width:auto%;
     <script src="app.min.js"></script>
     <script type="text/javascript">
 	
+	
+									<!--open/close for side nav-->
+	
+	
+		function openNav() {
+		document.getElementById("mySidenav").style.width = "250px";
+	}
+
+	function closeNav() {
+		document.getElementById("mySidenav").style.width = "0";
+	}
 	
 	
 								<!--localStorage for checkbox keeps boxes checked-->
@@ -432,18 +514,6 @@ width:auto%;
     });
 	
 	
-	
-	
-								<!--open/close for side nav-->
-	
-	
-		function openNav() {
-		document.getElementById("mySidenav").style.width = "250px";
-	}
-
-	function closeNav() {
-		document.getElementById("mySidenav").style.width = "0";
-	}
 	
 	
 								<!--localStorage for-->
